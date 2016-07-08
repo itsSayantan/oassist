@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>OAssist - Office Assistant</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src = "js/jquery.js"></script>
+	<script type="text/javascript" src = "js/bootstrap.min.js"></script>
+	<script type="text/javascript" src = "js/oassist.js"></script>
+</head>
+<body id = "body">
+	<div class = "container-fluid">
+		<div class = "topnav"><p>OAssist - Office Assistant</p><span class = "companyName" id = "companyName">S.A. Construction</span></div>
+		<div class = "lowmain">
+			<div class = "lowmainsec">
+				<div class = "leftmenu">
+					<div class = "leftmenuitem" id = "lmi0">Appointments</div>
+					<div class = "leftmenuitem" id = "lmi1">Payments</div>
+					<div class = "leftmenuitem" id = "lmi2">Employees</div>
+				</div>
+				<div class = "rightsec">
+					<!-- Appointments Section !-->
+					<div class = "rightsecitem" id = "rsi0">
+						<div class = "rsititle">Appointments
+							<span class = "btn btn-primary add" id = "addrsi0" data-toggle = "modal" data-target = "#addAppModal">Add</span>
+							<span class = "btn btn-primary remove" id = "removersi0" data-toggle = "modal" data-target = "#removeAppModal">Remove</span>
+						</div>
+						<div class = "rsibody" id = "rsibody0">
+							<div class = "loadingContainer">
+								<div class = "loading">Loading...</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Payments Section !-->
+					<div class = "rightsecitem" id = "rsi1">
+						<div class = "rsititle">Payments
+							<span class = "btn btn-primary add" id = "addrsi1" data-toggle = "modal" data-target = "#addPayModal">Add</span>
+							<span class = "btn btn-primary remove" id = "removersi0" data-toggle = "modal" data-target = "#removePayModal">Remove</span>
+						</div>
+						<div class = "rsibody" id = "rsibody1">
+							<div class = "loadingContainer">
+								<div class = "loading">Loading...</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Employees Section !-->
+					<div class = "rightsecitem" id = "rsi2">
+						<div class = "rsititle">Employees
+							<span class = "btn btn-primary add" id = "addrsi0" data-toggle = "modal" data-target = "#addEmpModal">Add</span>
+							<span class = "btn btn-primary remove" id = "removersi0" data-toggle = "modal" data-target = "#removeEmpModal">Remove</span></div>
+						<div class = "rsibody">
+							<div class = "empSearchContainer">
+								<input type = "text" placeholder = "Search" name = "empSearch" class = "empSearch" id = "empSearch">
+								<div class = "btn btn-primary empSearchBut" id = "empSearchBut">Search</div>
+							</div>
+							<div class = "empDisContainer" id = "empDisContainer">
+								<div class = "rsicard2">Type an Employee id and then search</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Add Apppointments Modal !-->
+
+		<div class = "modal fade" id = "addAppModal" tabindex = "-1" role = "dialog" aria-labelledby = "addAppModalLabel" aria-hidden = "true">
+			<div class = "modal-dialog">
+				<div class = "modal-content">
+					<div class = "modal-header">
+						<button type = "button" class = "close" data-dismiss = "modal" aria-label = "close"><span aria-hidden = "true">&times;</span></button>
+						<h4 class = "modal-title" id = "addAppModalLabel">Add Appointments</h4>
+					</div>
+					<div class = "modal-body">
+						<form role = "form">
+							<div class = "form-group">
+								<label for = "appNmae">Name</label>
+								<input type = "text" class = "form-control" id = "appName" placeholder = "Enter Name">
+							</div>
+							<div class = "form-group">
+								<label for = "appType">Type</label>
+								<input type = "text" class = "form-control" id = "appType" placeholder = "Enter the type of appointment">
+							</div>
+							<div class = "form-group">
+								<label for = "appTimeFrom">From</label>
+								<input type = "text" class = "form-control" id = "appTimeFrom" placeholder = "From (hh:mm)">
+							</div>
+							<div class = "form-group">
+								<label for = "appTimeTo">To</label>
+								<input type = "text" class = "form-control" id = "appTimeTo" placeholder = "To (hh:mm)">
+							</div>
+							<div class = "form-group">
+								<label for = "appTimeDate">Date</label>
+								<input type = "text" class = "form-control" id = "appTimeDate" placeholder = "Date (dd/mm/yyyy)">
+							</div>
+							<div class = "btn btn-primary" id = "addAppBut">Add</div>
+						</form>
+					</div>
+					<div class = "modal-footer">
+						<span id = "addAppFeed">All Fields are Mandatory</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Add Appointments modal ends !-->
+
+		<!-- Add Payments Modal !-->
+
+		<div class = "modal fade" id = "addPayModal" tabindex = "-1" role = "dialog" aria-labelledby = "addPayModalLabel" aria-hidden = "true">
+			<div class = "modal-dialog">
+				<div class = "modal-content">
+					<div class = "modal-header">
+						<button type = "button" class = "close" data-dismiss = "modal" aria-label = "close"><span aria-hidden = "true">&times;</span></button>
+						<h4 class = "modal-title" id = "addPayModalLabel">Add Payments</h4>
+					</div>
+					<div class = "modal-body">
+						<form role = "form">
+							<div class = "form-group">
+								<label for = "payNmae">Name</label>
+								<input type = "text" class = "form-control" id = "payName" placeholder = "Enter Name">
+							</div>
+							<div class = "form-group">
+								<label for = "payType">Type</label>
+								<input type = "text" class = "form-control" id = "payType" placeholder = "Enter the type of Payment">
+							</div>
+							<div class = "form-group">
+								<label for = "payDate">Date</label>
+								<input type = "text" class = "form-control" id = "payDate" placeholder = "Date">
+							</div>
+							<div class = "form-group">
+								<label for = "payAmount">Amount</label>
+								<input type = "text" class = "form-control" id = "payAmount" placeholder = "Amount (in INR)">
+							</div>
+							<div class = "btn btn-primary" id = "addPayBut">Add</div>
+						</form>
+					</div>
+					<div class = "modal-footer">
+						<span id = "addPayFeed">All Fields are Mandatory</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Add Payments modal ends !-->
+
+		<!-- Add Employees Modal !-->
+
+		<div class = "modal fade" id = "addEmpModal" tabindex = "-1" role = "dialog" aria-labelledby = "addEmpModalLabel" aria-hidden = "true">
+			<div class = "modal-dialog">
+				<div class = "modal-content">
+					<div class = "modal-header">
+						<button type = "button" class = "close" data-dismiss = "modal" aria-label = "close"><span aria-hidden = "true">&times;</span></button>
+						<h4 class = "modal-title" id = "addEmpModalLabel">Add Employees</h4>
+					</div>
+					<div class = "modal-body">
+						<form role = "form">
+							<div class = "form-group">
+								<label for = "empNmae">Name</label>
+								<input type = "text" class = "form-control" id = "empName" placeholder = "Enter Name">
+							</div>
+							<div class = "form-group">
+								<label for = "empType">Type</label>
+								<input type = "text" class = "form-control" id = "empType" placeholder = "Enter the type of Employee">
+							</div>
+							<div class = "form-group">
+								<label for = "empDoj">Date</label>
+								<input type = "text" class = "form-control" id = "empDoj" placeholder = "Date of joining (dd/mm/yyyy)">
+							</div>
+							<div class = "form-group">
+								<label for = "empPh">Phone</label>
+								<input type = "text" class = "form-control" id = "empPh" placeholder = "Phone/Mobile number">
+							</div>
+							<div class = "form-group">
+								<label for = "empEmail">Email</label>
+								<input type = "text" class = "form-control" id = "empEmail" placeholder = "Email">
+							</div>
+							<div class = "form-group">
+								<label for = "empAdd">Address</label>
+								<input type = "text" class = "form-control" id = "empAdd" placeholder = "Enter full Address">
+							</div>
+							<div class = "form-group">
+								<label for = "empPass">Password</label>
+								<input type = "password" class = "form-control" id = "empPass" placeholder = "Password">
+							</div>
+							<div class = "form-group">
+								<label for = "empRPass">Repeat Password</label>
+								<input type = "password" class = "form-control" id = "empRPass" placeholder = "Repeat Password">
+							</div>
+							<div class = "btn btn-primary" id = "addEmpBut">Add</div>
+						</form>
+					</div>
+					<div class = "modal-footer">
+						<span id = "addEmpFeed">All Fields are Mandatory</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Add Employees modal ends !-->
+
+		<!-- Remove Appointments modal !-->
+
+		<div class = "modal fade" id = "removeAppModal" tabindex = "-1" role = "dialog" aria-labelledby = "removeAppModalLabel" aria-hidden = "true">
+			<div class = "modal-dialog">
+				<div class = "modal-content">
+					<div class = "modal-header">
+						<button type = "button" class = "close" data-dismiss = "modal" aria-label = "close"><span aria-hidden = "true">&times;</span></button>
+						<h4 class = "modal-title" id = "removeAppModalLabel">Remove Appointments</h4>
+					</div>
+					<div class = "modal-body">
+						<form role = "form">
+							<div class = "form-group">
+								<label for = "appId">Appointment ID</label>
+								<input type = "text" class = "form-control" id = "appId" placeholder = "Appointment ID">
+							</div>
+							<div class = "btn btn-primary" id = "removeAppBut">Remove</div>
+						</form>
+					</div>
+					<div class = "modal-footer">
+						<span id = "removeAppFeed">All Fields are Mandatory</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Remove Appointments modal ends !-->
+
+		<!-- Remove Payments modal !-->
+
+		<div class = "modal fade" id = "removePayModal" tabindex = "-1" role = "dialog" aria-labelledby = "removePayModalLabel" aria-hidden = "true">
+			<div class = "modal-dialog">
+				<div class = "modal-content">
+					<div class = "modal-header">
+						<button type = "button" class = "close" data-dismiss = "modal" aria-label = "close"><span aria-hidden = "true">&times;</span></button>
+						<h4 class = "modal-title" id = "removePayModalLabel">Remove Payments</h4>
+					</div>
+					<div class = "modal-body">
+						<form role = "form">
+							<div class = "form-group">
+								<label for = "payId">Payment ID</label>
+								<input type = "text" class = "form-control" id = "payId" placeholder = "Payment ID">
+							</div>
+							<div class = "btn btn-primary" id = "removePayBut">Remove</div>
+						</form>
+					</div>
+					<div class = "modal-footer">
+						<span id = "removePayFeed">All Fields are Mandatory</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Remove Payments modal ends !-->
+
+		<!-- Remove Employees modal !-->
+
+		<div class = "modal fade" id = "removeEmpModal" tabindex = "-1" role = "dialog" aria-labelledby = "removeEmpModalLabel" aria-hidden = "true">
+			<div class = "modal-dialog">
+				<div class = "modal-content">
+					<div class = "modal-header">
+						<button type = "button" class = "close" data-dismiss = "modal" aria-label = "close"><span aria-hidden = "true">&times;</span></button>
+						<h4 class = "modal-title" id = "removeEmpModalLabel">Remove Employee</h4>
+					</div>
+					<div class = "modal-body">
+						<form role = "form">
+							<div class = "form-group">
+								<label for = "empId">Employee ID</label>
+								<input type = "text" class = "form-control" id = "empId" placeholder = "Employee ID">
+							</div>
+							<div class = "form-group">
+								<label for = "removeEmpPass">Password</label>
+								<input type = "password" class = "form-control" id = "removeEmpPass" placeholder = "Password">
+							</div>
+							<div class = "btn btn-primary" id = "removeEmpBut">Remove</div>
+						</form>
+					</div>
+					<div class = "modal-footer">
+						<span id = "removeEmpFeed">All Fields are Mandatory</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Remove Employees modal ends !-->
+	</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+	"name": "oassist",
+	"manifest_version": 2,
+	"version": "1.0",
+	"chrome_url_overrides" : {
+		"newtab": "oassist.html"
+	},
+
+	"permissions": [
+		"http://oassist.16mb.com/*"
+	]
+
+}
