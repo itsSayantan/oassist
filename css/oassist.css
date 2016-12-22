@@ -1,0 +1,768 @@
+/*
+
+File: oassist.css
+Author: Sayantan Ghosh
+Description: Main CSS file for OAssist
+
+*/
+
+body{
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	font-family: Helvetica, sans-serif;
+	overflow-x: hidden;
+}
+
+/* Navigation bar */
+
+.nav{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 100%;
+	background: #111222;
+	overflow: hidden;
+}
+
+.navlogo{
+	position: absolute;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 100%;
+	font-size: 16px;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	background: #DADEE5;
+	color: #000000;
+	cursor: pointer;
+}
+
+.navgrp{
+	position: absolute;
+	top: 0;
+	left: calc(50% - 400px);
+	width: 800px;
+	height: 100%;
+	background: #DEDEDE;
+}
+
+.navitem{
+	text-align: center;
+	position: relative;
+	float: left;
+	top: 0;
+	width: 200px;
+	height: 100%;
+	background: #111222;
+	color: #FFFFFF;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	cursor: pointer;
+}
+
+/* Navigation bar ends */
+
+/* Main section */
+
+.mainsec{
+	position: absolute;
+	top: 50px;
+	left: ;
+	width: 400%;
+	height: calc(100% - 50px);
+	background: #FFFFFF;
+	overflow-x: hidden;
+}
+
+/* Appointments section */
+
+.appointments{
+	position: absolute;
+	top: 50px;
+	left: 12.5%;
+	margin-left: -400px;
+	width: 800px;
+	height: 500px;
+	background: #DADEE5;
+	border-bottom: 1px solid #111222;
+}
+
+.appleft{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 449px;
+	height: 100%;
+	overflow: hidden;
+	background: #DADEE5;
+	border-right: 1px dotted #111222;
+}
+
+.applefthead{
+	position: absolute;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 18px;
+	font-size: 18px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background: #111222;
+	color: #FFFFFF;
+}
+
+.appdisp{
+	position: absolute;
+	top: 55px;
+	left: 8px;
+	width: calc(100% - 16px);
+	height: calc(100% - 60px);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.appdispiddate{
+	width: 333px;
+	height: 24px;
+	font-size: 16px;
+	padding: 5px;
+	border: 1px solid #111222;
+}
+
+.appdispbutton{
+	position: absolute;
+	margin-left: 5px;
+	width: 80px;
+	height: 36px;
+	font-size: 16px;
+	background: #337AB7;
+	color: #FFFFFF;
+	border-radius: 5px;
+	border: none;
+	padding: 5px;
+	outline: none;
+	border-bottom: 1px solid #2269A6;
+}
+
+.appdispbutton:active{
+	background: #2269A6;
+	border-bottom: 1px solid #337AB7;
+}
+
+.appdispres{
+	position: absolute;
+	top: 45px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 50px);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.appdispref{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	font-size: 16px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background: #B8BCC3;
+	color: #000000;
+	border-bottom: 2px solid #111222;
+}
+
+.appdispno{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	font-size: 16px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background: #B8BCC3;
+	color: #000000;
+	border-bottom: 2px solid #111222;
+}
+
+.appdispeach{
+	position: relative;
+	float: left;
+	display: block;
+	left: 0;
+	width: 100%;
+	font-size: 16px;
+	padding: 12px;
+	margin-bottom: 5px;
+	text-align: left;
+	background: #B8BCC3;
+	color: #000000;
+	border-bottom: 2px solid #111222;
+}
+
+.appright{
+	position: absolute;
+	top: 0;
+	left: 450px;
+	width: 350px;
+	height: 100%;
+}
+
+.apprighthead{
+	position: absolute;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 18px;
+	font-size: 18px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background: #111222;
+	color: #FFFFFF;
+}
+
+.apprightform{
+	position: absolute;
+	top: 55px;
+	left: 5px;
+	width: 340px;
+	height: 440px;
+}
+
+.appname,.apptype,.appdate,.apptime{
+	position: relative;
+	float: left;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	width: 322px;
+	height: 24px;
+	font-size: 16px;
+	padding: 3px;
+	border: 1px solid #111222;
+}
+
+.appbutton{
+	margin-left: 5px;
+	width: 50px;
+	height: 34px;
+	font-size: 16px;
+	background: #337AB7;
+	color: #FFFFFF;
+	border-radius: 5px;
+	border: none;
+	padding: 5px;
+	outline: none;
+	border-bottom: 1px solid #2269A6;
+}
+
+.appbutton:active{
+	background: #2269A6;
+	border-bottom: 1px solid #337AB7;
+}
+
+/* Appointments section ends */
+
+/* Attendance section */
+
+.attendance{
+	position: absolute;
+	top: 50px;
+	left: 37.5%;
+	margin-left: -400px;
+	width: 800px;
+	height: 500px;
+	background: #DADEE5;
+	border-bottom: 1px solid #111222;
+}
+
+.attleft{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 449px;
+	height: 100%;
+	overflow: hidden;
+	background: #DADEE5;
+	border-right: 1px dotted #111222;
+}
+
+.attlefthead{
+	position: absolute;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 18px;
+	font-size: 18px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background: #111222;
+	color: #FFFFFF;
+}
+
+.attdisp{
+	position: absolute;
+	top: 55px;
+	left: 8px;
+	width: 432px;
+	height: 440px;
+}
+
+.attdispid{
+	width: 167px;
+	height: 24px;
+	font-size: 16px;
+	padding: 5px;
+	border: 1px solid #111222;
+}
+
+.attdispdate{
+	width: 152px;
+	height: 24px;
+	font-size: 16px;
+	font-size: 16px;
+	padding: 5px;
+	border: 1px solid #111222;
+}
+
+.attdispbutton{
+	position: absolute;
+	margin-left: 5px;
+	width: 80px;
+	height: 36px;
+	font-size: 16px;
+	background: #337AB7;
+	color: #FFFFFF;
+	border-radius: 5px;
+	border: none;
+	padding: 5px;
+	outline: none;
+	border-bottom: 1px solid #2269A6;
+}
+
+.attdispbutton:active{
+	background: #2269A6;
+	border-bottom: 1px solid #337AB7;
+}
+
+.attdispres{
+	position: absolute;
+	top: 45px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 50px);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.attdispsrch{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	font-size: 16px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background: #B8BCC3;
+	color: #000000;
+	border-bottom: 2px solid #111222;
+}
+
+.attdisperr{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	font-size: 16px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background: #B8BCC3;
+	color: #000000;
+	border-bottom: 2px solid #111222;
+}
+
+.attdispdet{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-size: 16px;
+	padding: 12px;
+	margin-top: 5px;
+	text-align: left;
+	background: #B8BCC3;
+	color: #000000;
+	border-bottom: 2px solid #111222;
+}
+
+.attright{
+	position: absolute;
+	top: 0;
+	left: 450px;
+	width: 350px;
+	height: 100%;
+}
+
+.attrighthead{
+	position: absolute;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 18px;
+	font-size: 18px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background: #111222;
+	color: #FFFFFF;
+}
+
+.attrightform{
+	position: absolute;
+	top: 55px;
+	left: 5px;
+	width: 340px;
+	height: 440px;
+}
+
+.attid,.attdate,.attpass{
+	position: relative;
+	float: left;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	width: 322px;
+	height: 24px;
+	font-size: 16px;
+	padding: 3px;
+	border: 1px solid #111222;
+}
+
+.attbutton{
+	margin-left: 5px;
+	width: 50px;
+	height: 36px;
+	font-size: 16px;
+	background: #337AB7;
+	color: #FFFFFF;
+	border-radius: 5px;
+	border: none;
+	padding: 5px;
+	outline: none;
+	border-bottom: 1px solid #2269A6;
+}
+
+.attbutton:active{
+	background: #2269A6;
+	border-bottom: 1px solid #337AB7;
+}
+
+/* Attendance section ends */
+
+/* Employees section */
+
+.employees{
+	position: absolute;
+	top: 50px;
+	left: 62.5%;
+	margin-left: -400px;
+	width: 800px;
+	height: 500px;
+	background: #DADEE5;
+	border-bottom: 1px solid #111222;
+}
+
+.empleft{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 449px;
+	height: 100%;
+	overflow: hidden;
+	background: #DADEE5;
+	border-right: 1px dotted #111222;
+}
+
+.emplefthead{
+	position: absolute;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 18px;
+	font-size: 18px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background: #111222;
+	color: #FFFFFF;
+}
+
+.empdisp{
+	position: absolute;
+	top: 55px;
+	left: 8px;
+	width: 432px;
+	height: 440px;
+}
+
+.empdispid{
+	width: 333px;
+	height: 24px;
+	font-size: 16px;
+	padding: 5px;
+	border: 1px solid #111222;
+}
+
+.empdispbutton{
+	position: absolute;
+	margin-left: 5px;
+	width: 80px;
+	height: 36px;
+	font-size: 16px;
+	background: #337AB7;
+	color: #FFFFFF;
+	border-radius: 5px;
+	border: none;
+	padding: 5px;
+	outline: none;
+	border-bottom: 1px solid #2269A6;
+}
+
+.empdispbutton:active{
+	background: #2269A6;
+	border-bottom: 1px solid #337AB7;
+}
+
+.empdispres{
+	position: absolute;
+	top: 45px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 50px);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.empdispsrch{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	font-size: 16px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background: #B8BCC3;
+	color: #000000;
+	border-bottom: 2px solid #111222;
+}
+
+.empdisperr{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	font-size: 16px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background: #B8BCC3;
+	color: #000000;
+	border-bottom: 2px solid #111222;
+}
+
+.empdispdet{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-size: 16px;
+	padding: 12px;
+	margin-top: 5px;
+	text-align: left;
+	background: #B8BCC3;
+	color: #000000;
+	border-bottom: 2px solid #111222;
+}
+
+.empright{
+	position: absolute;
+	top: 0;
+	left: 450px;
+	width: 350px;
+	height: 100%;
+}
+
+.emprighthead{
+	position: absolute;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 18px;
+	font-size: 18px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background: #111222;
+	color: #FFFFFF;
+}
+
+.emprightform{
+	position: absolute;
+	top: 55px;
+	left: 5px;
+	width: 340px;
+	height: 440px;
+}
+
+.empname,.emppan,.emptype,.empdoj,.empphn,.empemail,.empaddr,.emppass,.emprpass{
+	position: relative;
+	float: left;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	width: 322px;
+	height: 24px;
+	font-size: 16px;
+	padding: 3px;
+	border: 1px solid #111222;
+}
+
+.empbutton{
+	margin-left: 5px;
+	width: 50px;
+	height: 36px;
+	font-size: 16px;
+	background: #337AB7;
+	color: #FFFFFF;
+	border-radius: 5px;
+	border: none;
+	padding: 5px;
+	outline: none;
+	border-bottom: 1px solid #2269A6;
+}
+
+.empbutton:active{
+	background: #2269A6;
+	border-bottom: 1px solid #337AB7;
+}
+
+/* Employees section ends */
+
+/* About section */
+
+.about{
+	position: absolute;
+	top: 50px;
+	left: 87.5%;
+	margin-left: -400px;
+	width: 800px;
+	height: 500px;
+	background: #DADEE5;
+	border-bottom: 1px solid #111222;
+}
+
+.aboutwrapper{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 780px;
+	height: 480px;
+}
+
+/* About section ends */
+
+/* Main section ends */
+
+/* Overlay section */
+
+.overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.4);
+	display: none;
+}
+
+.oin{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -95px;
+	margin-left: -150px;
+	width: 300px;
+	height: 190px;
+	border-radius: 3px;
+	background: #FEFEFE;
+	box-shadow: 0 0 5px 8px #666777;
+	-webkit-box-shadow: 0 0 5px 8px #666777;
+}
+
+.oinhead{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	text-align: center;
+	font-size: 16px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-bottom: 1px dotted #666777;
+}
+
+.oindisp{
+	position: absolute;
+	top: 45px;
+	left: 5px;
+	width: 290px;
+	height: 100px;
+}
+
+.oinfoot{
+	position: absolute;
+	top: 150px;
+	left: 5px;
+	width: 290px;
+	height: 35px;
+	display: none;
+}
+
+.overlayclose{
+	position: absolute;
+	right: 0;
+	width: 70px;
+	height: 35px;
+	font-size: 15px;
+	padding: 10px;
+	padding: 9px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	background: #337AB7;
+	color: #FFFFFF;
+	border-bottom: 1px solid #2269A6;
+}
+
+.overlayclose:active{
+	background: #2269A6;
+	border-bottom: 1px solid #337AB7;
+}
+
+/* Overlay section ends */

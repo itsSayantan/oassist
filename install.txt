@@ -1,0 +1,11 @@
+Installation Instructions:-
+
+1. Open Google Chrome web browser.
+
+2. Goto: More Tools > Extensions.
+
+3. Enable Developer mode and click on "Load unpacked   extension..." button.
+
+4. Select the "oassist" folder from the location you chose   when you downloaded OAssist.
+
+5. Open a new tab in the browser to start using OAssist
